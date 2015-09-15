@@ -1,3 +1,4 @@
 <h1><%= @question.title %> </h1>
 <h3>Posted at: <%= @question.created_at %></h3>
 <p><%= @question.body %></p>
+<%= link_to 'Answers', question_answers_path(@question.id) %>

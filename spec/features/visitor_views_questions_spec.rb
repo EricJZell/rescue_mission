@@ -10,9 +10,9 @@ Acceptance Criteria
 [x] I must see questions listed in order, most recently posted first
 } do
   scenario 'visitor goes to root path' do
-    q1 = Question.create(user_id: 1, title: 'Why')
-    q2 = Question.create(user_id: 1, title: 'When')
-    q3 = Question.create(user_id: 1, title: 'Recent')
+    q1 = FactoryGirl.create(:question)
+    q2 = FactoryGirl.create(:question)
+    q3 = FactoryGirl.create(:question)
     visit '/'
     expect(page).to have_content(q1.title)
     expect(page).to have_content(q2.title)

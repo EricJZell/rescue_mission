@@ -1,0 +1,10 @@
+<h1>Answers</h1>
+<ul>
+<% @answers.each do |answer| %>
+  <li>
+    <h3><%= answer.title %></h3>
+    <p><%= answer.body %> </p>
+  </li>
+<% end %>
+</ul>
+<%= link_to 'Post a new answer', new_question_answer_path %>
