@@ -20,7 +20,7 @@ class QuestionsController < ApplicationController
       flash[:notice] = 'Question added'
       redirect_to '/questions'
     else
-      flash[:notice] = @question.errors.full_messages.join(', ')
+      flash[:error] = @question.errors.full_messages.join(', ')
       render :new
     end
   end

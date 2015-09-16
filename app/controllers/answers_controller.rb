@@ -6,7 +6,7 @@ class AnswersController < ApplicationController
     if @answer.save
       flash[:notice] = 'Answer added'
     else
-      flash[:notice] = @answer.errors.full_messages.join(', ')
+      flash[:error] = @answer.errors.full_messages.join(', ')
     end
     redirect_to question_path(@question.id)
   end
