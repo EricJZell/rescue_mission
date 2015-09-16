@@ -1,10 +1,10 @@
-<h1>Post a new answer!</h1>
-<%= form_for [@question, @answer] do |f| %>
+<h1>Edit Question</h1>
+<%= form_for @question do |f| %>
   <%= f.label :title %>
   <%= f.text_field :title %>
   <%= f.label :body %>
   <%= f.text_area :body %>
-  <%= f.submit "Add Answer" %>
+  <%= f.submit "Edit Question" %>
 <% end %>
 <br />
 <%= link_to 'Return Home', questions_path %>

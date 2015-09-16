@@ -1,4 +1,22 @@
 <h1><%= @question.title %> </h1>
 <h3>Posted at: <%= @question.created_at %></h3>
 <p><%= @question.body %></p>
-<%= link_to 'Answers', question_answers_path(@question.id) %>
+<!-- <%= link_to 'Answers', question_answers_path(@question.id) %> -->
+<h2>Answers</h2>
+<ul>
+  <% @answers.each do |answer| %>
+    <li>
+      <h3><%= answer.title %></h3>
+      <p><%= answer.body %></p>
+    </li>
+  <% end %>
+</ul>
+<h1>Post a new answer!</h1>
+<%= form_for [@question, @answer] do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+  <%= f.submit "Add Answer" %>
+<% end %>
+<br />

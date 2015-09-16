@@ -6,9 +6,9 @@ So that I can help them solve their problem
 
 Acceptance Criteria
 
-[] I must be on the question detail page
-[] I must provide a description that is at least 50 characters long
-[] I must be presented with errors if I fill out the form incorrectly
+[x] I must be on the question detail page
+[x] I must provide a description that is at least 50 characters long
+[x] I must be presented with errors if I fill out the form incorrectly
 } do
   scenario 'user adds a valid answer' do
     answer = FactoryGirl.create(:answer)
@@ -30,8 +30,6 @@ def submit_answer(answer)
   question = FactoryGirl.create(:question)
   visit '/'
   click_link question.title
-  click_link 'Answers'
-  click_link 'Post a new answer'
   fill_in 'Title', with: answer.title
   fill_in 'Body', with: answer.body
   click_button 'Add Answer'

@@ -6,6 +6,7 @@ class QuestionsController < ApplicationController
 
   def show
     @question = Question.find(params[:id])
+    @answers = @question.answers
     @answer = Answer.new
   end
 
@@ -21,6 +22,26 @@ class QuestionsController < ApplicationController
     else
       flash[:notice] = @question.errors.full_messages.join(', ')
       render :new
+    end
+  end
+
+  def destroy
+    Question.find(params[:id]).destroy
+    redirect_to questions_path
+  end
+
+  def edit
+    @question = Question.find(params[:id])
+  end
+
+  def update
+    @question = Question.find(params[:id])
+    if @question.update(question_params)
+      flash[:notice] = 'Question Updated!'
+      redirect_to @question
+    else
+      flash[:error] = @question.errors.full_messages.join(', ')
+      render :edit
     end
   end
 

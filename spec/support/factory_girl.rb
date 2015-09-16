@@ -7,6 +7,7 @@ FactoryGirl.define do
     body "This assignment is super long. Are we supposed to do \
       this all in one night? And how many characters is 140? It is the length of a tweet? \
       How long is that? Is this 140 characters?"
+      
   end
 
   factory :answer do
