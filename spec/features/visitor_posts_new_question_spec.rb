@@ -25,8 +25,8 @@ Acceptance Criteria
 
   scenario 'user adds an invalid question' do
     visit '/questions/new'
-    fill_in 'Title', with: 'How long will this take?'
-    fill_in 'Body', with: 'Are we really suppoosed to do all this?'
+    fill_in 'Title', with: 'Hey-o'
+    fill_in 'Body', with: 'What\'s the deal-io?'
     click_button 'Add Question'
     expect(page).to have_content('Title is too short')
     expect(page).to have_content('Body is too short')

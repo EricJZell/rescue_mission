@@ -120,6 +120,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (10.4.2)
     rdoc (4.2.0)
+    redcarpet (3.3.2)
     rspec-core (3.2.3)
       rspec-support (~> 3.2.0)
     rspec-expectations (3.2.1)
@@ -180,6 +181,7 @@ PLATFORMS
 DEPENDENCIES
   byebug
   capybara
+  coderay
   coffee-rails (~> 4.1.0)
   factory_girl
   jbuilder (~> 2.0)
@@ -188,6 +190,7 @@ DEPENDENCIES
   pg
   pry
   rails (= 4.2.3)
+  redcarpet
   rspec-rails
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)

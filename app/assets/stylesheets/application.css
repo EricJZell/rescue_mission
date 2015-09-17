@@ -1,5 +1,9 @@
-body {
-  padding: 30px;
+.my-stuff {
+  padding: 20px;
+}
+
+.flash {
+  padding: 5px 15px;
 }
 
 .flash-notice {
@@ -8,4 +12,11 @@ body {
 
 .flash-error {
   border: solid 2px red;
+}
+
+.question, .answer {
+  border: solid 1px #555;
+  margin: 10px;
+  padding-left: 10px;
+  list-style: none;
 }

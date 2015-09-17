@@ -17,7 +17,7 @@ Acceptance Criteria
     expect(page).to have_content(q1.title)
     expect(page).to have_content(q2.title)
     expect(page).to have_content(q3.title)
-    within "li:first" do
+    within "li.question:first" do
       page.should have_content q3.title
     end
   end
